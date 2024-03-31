@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Configuração para registrar mensagens de log no console -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Configuração para registrar mensagens de log em um arquivo -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>/Users/edmarsr/programacao/IdeaProjects/02-logs/agrestina.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{dd/MM/yy HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Definindo o nível de log para todas as classes -->
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </root>
+
+</configuration>
