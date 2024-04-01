@@ -10,7 +10,7 @@
 
     <!-- Configuração para registrar mensagens de log em um arquivo -->
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>/Users/edmarsr/programacao/IdeaProjects/02-logs/agrestina.log</file>
+        <file>/tmp/agrestina.log</file>
         <append>true</append>
         <encoder>
             <pattern>%d{dd/MM/yy HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
