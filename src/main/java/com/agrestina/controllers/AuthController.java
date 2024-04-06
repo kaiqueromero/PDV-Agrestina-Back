@@ -45,9 +45,9 @@ public class AuthController {
                 return ResponseEntity.ok(new LoginResponseDTO(user.getName(), token, user.getUserRole().toString()));
             }
 
-            log.info("Tentativa de login com falha. Login = {} ", body.login());
+            log.info("Usuario e/ou senha invalida. Login = {} ", body.login());
             //return ResponseEntity.badRequest().build();
-            return ResponseEntity.badRequest().body("Tentativa de login com falha");
+            return ResponseEntity.badRequest().body("Usuario e/ou senha invalida");
 
         } catch (RuntimeException e) {
             log.info("Login nao encontrado. Login = {}", body.login());
